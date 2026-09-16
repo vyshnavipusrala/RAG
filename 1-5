@@ -1,0 +1,36 @@
+Why rag is required when LLM is already powerful
+	LLMS doesn’t know your private/company data 
+	LLM knowledge can be outdated, it can hallucinate
+	Don’t need to retrain LLM every time when data changes
+	Rag provides sources/ citations
+
+Is rag still relevant in the era of long context LLMS
+	Yes, rag is still important even with large-context LLMs
+	Large context models have limitation:
+		Lost-in-the-middle
+		Higher API costs
+		Increased latency 
+	As context becomes large it's tough for the LLM to find the most relevant information effects the quality of responses, processing large amounts of text for every request increases the tokens so cost and latency were effected
+	
+Challenges of RAG Systems?
+	Retrieval problems?                                Generation problems?
+		Wrong chunks                                      hallucination
+		Poor chunking                                      poor reasoning                       
+		Bad embedding                                    context overload
+		Query ambiguity                                  unsupported answer
+		Stale documents 
+		
+Effective strategies to reduce latency in RAG systems?
+	Reduces the no. of retrieved documents
+	Use a fast vector database
+	Reduce or limit unnecessary re ranking
+	Parallelize independent operations
+	Reduce LLM calls
+	User faster and smaller models
+	Reduce context size
+	Cache the embedding's and generally asked questions and responses
+	
+Explain R,A,G in RAG?
+	R- retrieval   process of searching and fetching the most relevant information from the external knowledge sources for the given user query
+	A-Augmented  includes retrieved context, instructions, query in the prompt 
+	G-Generation generator LLM process the prompt to generate a response  that is accurate and relevant
